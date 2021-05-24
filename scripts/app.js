@@ -1,10 +1,6 @@
 
 let payLoad = {};
 
-<<<<<<< HEAD
-=======
-const token = "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"
->>>>>>> aef23cf38a4f53cf97de8aac20281a90b7bb9e9a
  fetch('https://api.github.com/graphql', {
     method: "POST",
     headers:  {
