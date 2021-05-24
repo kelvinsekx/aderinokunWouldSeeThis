@@ -4,7 +4,7 @@ let payLoad = {};
     method: "POST",
     headers:  {
         "Content-Type":"application/json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer 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"
     },
     body: JSON.stringify({
         query: `
@@ -62,10 +62,8 @@ setTimeout(() => {
       c = 'purple'
     }else if(lang == "TypeScript"){
       c = 'indigo'
-    }else if(lang == "HTML"){
-      c = 'red'
     }else{
-      c = "rgb(23, 105, 2)"
+      c = "red"
     }
     return c;
   }
