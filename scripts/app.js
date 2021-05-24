@@ -1,10 +1,11 @@
 let payLoad = {};
 
+const token = "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"
  fetch('https://api.github.com/graphql', {
     method: "POST",
     headers:  {
         "Content-Type":"application/json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer " + token
     },
     body: JSON.stringify({
         query: `
