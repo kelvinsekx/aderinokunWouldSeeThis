@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- SORRY, I be dumping my icons here:::what a file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Rocking with sekx</title>
+    <script src="./scripts/app.js" defer></script>
+    <link rel="stylesheet" href="./styles/footerstyle.css">
+    <link rel="stylesheet" href="./styles/bodystyle.css">
+</head>
+<body>
+    <div class="sekxWrapper">
+        <div id="header"> 
+            <nav>
+                <div class="inline">
+                    <div id="brand">
+                        <i class="bi bi-github"></i>
+                    </div>
+                    <div id="input">
+                        <label for="search" class="inline">
+                            <input type="text" placeholder="search or jump to..." id="search">
+                            <i class="bi bi-slash-square-fill"></i>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Pull Requests</li>
+                        <li>Issues</li>
+                        <li>Code Spaces</li>
+                        <li>Market Place</li>
+                        <li>Explore</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="notification">
+                        <div>
+                            <i class="bi bi-bell"></i>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="inline">
+                        <div>+</div>
+                        <i class="bi bi-caret-down"></i>
+                    </div>
+                    <div class="inline">
+                        <div style="border-radius: 100%; border: 2px solid rgb(247, 99, 99);padding:6px"></div> 
+                        <i class="bi bi-caret-down"></i
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="body">
+            <div id="profile">
+                <div class="avatar">
+                    <div id="picz">
+                        <div class="avatarPlaceholder"></div>
+                    </div>
+                    <div><i class="bi bi-emoji-heart-eyes"></i></div>
+                </div> 
+                <div class="avatarInfo">
+                    <div id="avi">loading</div>
+                </div>
+            </div>
+            <div id="repo">
+                <header>
+                    <div><i class="bi bi-book"></i> Overview </div>
+                    <div><i class="bi bi-journals"></i> Repositories</div>
+                    <div><i class="bi bi-textarea"></i> Projects</div>
+                    <div><i class="bi bi-box"></i> Packages</div>
+                </header>
+                <input placeholder="Find a repository..."/>
+                <div class="b_wrapper">
+                    <div><b id="totalCount">...</b> results for <b>public</b> repositories</div>
+                <div id="reporepo">
+                        <div style="text-align: center;margin-top: 3rem">loading...</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

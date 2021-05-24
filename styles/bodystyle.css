@@ -1,0 +1,143 @@
+div#body {
+  display: flex;
+  margin-top: 3rem;
+}
+div#body > #profile {
+  width: 23rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.notification{
+  display: flex;
+}
+.notification > div:nth-child(2) {
+  background-color:rgb(69, 57, 226) ;
+  border: 0.0001em solid rgb(73, 63, 214);
+  padding: 0.3em;
+  border-radius: 100%;
+  height: 0.2em;
+  width: 0.2em;
+  right: 0.5em;
+  position: relative;
+}
+#aavi {
+  width: 80%;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.n {
+  color: rgba(71, 57, 57, 0.6);
+  font-size: 120%;
+}
+.bi-caret-down{
+  position: relative;
+  top: 0.25em;
+}
+.u_name {
+  color: rgb(39, 37, 37);
+  font-size: 160%;
+}
+.u_bio {
+    font-size: 102%;
+    color: #222;
+  }
+#profile > .avatar {
+  display: flex;
+  align-items: center;
+}
+.avatarPlaceholder {
+  padding: 9rem;
+  width: 80%;
+  background: rgb(48, 41, 41);
+  border-radius: 100%;
+  border: none;
+}
+.avatarUrl{
+  width: 18rem;
+  height: 18rem;
+}
+img{
+  border-radius: 100%;
+  border: none;
+  width: 100%;
+}
+
+#profile > .avatar > div:nth-child(2) {
+  position: relative;
+  background-color: white;
+  margin-left: -0.98rem;
+  padding: 0.4em;
+  bottom: -2em;
+  border-radius: 100%;
+}
+
+div#body > #repo {
+  flex-grow: 1;
+}
+header {
+  display: flex;
+  border-bottom: 0.6px solid rgba(139, 131, 131, 0.5);
+  padding-bottom: 0.7rem;
+}
+div#repo > header > div {
+  width: 8rem;
+}
+b {
+  color: black;
+}
+
+div#repo > input {
+  padding: 0.4rem 0.4em;
+  border-radius: 5px;
+  margin: 2rem 0.1em;
+  width: 87%;
+  border: 1px solid rgba(139, 131, 131, 0.5);
+}
+div#repo > input:focus,
+div#repo > input:active {
+  outline: none;
+}
+
+.u_username {
+  color: rgb(53, 111, 219);
+  font-size: 124%;
+  font-weight: bold;
+}
+.u_rateStar {
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 80%;
+}
+.rateStar {
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 99%;
+  position: relative;
+  bottom: 0.15em;
+}
+.po{
+  position: relative;
+  bottom: 0.084em;
+}
+.rateStar > i {
+  display: inline-block;
+  position: relative;
+  bottom: 0.1em;
+  font-size: 120%;
+}
+
+.b_wrapper {
+  border-top: 1px solid rgba(97, 94, 94, 0.4);
+  width: 90%;
+  padding-top: 1.3rem;
+}
+.b_wrapper > div:nth-child(1) {
+  border-bottom: 1px solid rgba(97, 94, 94, 0.4);
+  width: 50%;
+  padding-bottom: 1.2rem;
+}
