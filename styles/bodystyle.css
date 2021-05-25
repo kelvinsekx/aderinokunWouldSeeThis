@@ -1,6 +1,25 @@
+/* Div main body's */
+@media only screen and (max-width: 800px) {
+  div#body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem !important;
+  }
+}
 div#body {
   display: flex;
   margin-top: 3rem;
+}
+
+/* Profile wrapper styles */
+@media only screen and (max-width: 800px) {
+  div#body > #profile {
+    padding-left: 1rem !important;
+    padding-bottom: 2rem;
+    flex-direction: row !important;
+    gap: 1em !important;
+    width: 100% !important;
+  }
 }
 div#body > #profile {
   width: 23rem;
@@ -9,18 +28,25 @@ div#body > #profile {
   flex-direction: column;
   gap: 2em;
 }
-.notification{
-  display: flex;
-}
-.notification > div:nth-child(2) {
-  background-color:rgb(69, 57, 226) ;
-  border: 0.0001em solid rgb(73, 63, 214);
-  padding: 0.3em;
-  border-radius: 100%;
-  height: 0.2em;
-  width: 0.2em;
-  right: 0.5em;
-  position: relative;
+
+@media only screen and (max-width: 800px) {
+  .avatarUrl{
+    width: 7rem !important;
+    height: 7rem !important;
+  }
+  #picz > div.avatarUrl>img{
+    width: 100% !important;
+    border: 2px solid pink;
+  }
+  #aavi {
+    width: 100% !important;
+    height: 7rem !important;
+    /* border: 2px solid red; */
+  }
+  .avatarPlaceholder {
+    padding: 3.5rem !important;
+    width: 70% !important;
+  }
 }
 #aavi {
   width: 80%;
@@ -75,6 +101,25 @@ img{
   border-radius: 100%;
 }
 
+@media only screen and (max-width: 800px) {
+  div#body > #repo {
+    padding: 1em 1em;
+  }
+  .u_{
+      padding: 0 !important;
+  }
+  .u_username {
+    font-size: 114% !important;
+    font-weight: 600 !important;
+  }
+  .b_wrapper {
+    width: 100% !important;
+    padding-top: 1.4rem !important;
+  }
+  .b_wrapper > div:nth-child(1) {
+    width: 80% !important;
+  }
+}
 div#body > #repo {
   flex-grow: 1;
 }
@@ -102,6 +147,11 @@ div#repo > input:active {
   outline: none;
 }
 
+.u_{
+  display: flex; align-items: 
+  center; justify-content: space-between;
+    padding: 0 0.1rem 0.3em 0;
+}
 .u_username {
   color: rgb(53, 111, 219);
   font-size: 124%;

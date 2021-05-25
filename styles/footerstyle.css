@@ -24,23 +24,77 @@ div#header > nav{
 nav>div{
     align-self: center;
 }
+
+nav > div:nth-child(1) {
+  flex-basis: 20rem;
+   margin-right: 1rem;
+}
 nav > div:nth-child(1) > #brand {
     font-size: 2.2rem;
     position: relative;
     bottom: 0.2rem;
 }
 
+/* search input style */
+@media only screen and (max-width: 800px) {
+    nav > div:nth-child(1) > #input {
+       visibility: hidden;
+       display: none;
+    }
+    .bnn{
+        visibility: hidden;
+        display: none;
+    }
+}
+nav > div:nth-child(1) > #input{
+    width: 100%;
+    height: 2rem;
+}
 nav > div:nth-child(1) > #input > label {
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0.10em 0.5em 0.1em 0.2em;
     margin-left: 0.8rem;
+    width: 100%;
+    height: 100%;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+#inputSearch {
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 15rem;
+    background-color: transparent;
+    display: inline-block;
+    height: 2rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+#inputSearch::placeholder {
+    font-size: 1rem;
+}
+
+#startSearch{
+    background-color: rgba(42, 42, 180, 0.7);
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 1em;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5em 0.7em;
 }
 nav > div:nth-child(1) > #input > label > input{
     border: none;
     background-color: transparent;
     display: inline-block;
     height: 100%;
+    width: 100%;
 }
 nav > div:nth-child(1) > #input > label > input::placeholder{
     color: white;
@@ -54,15 +108,46 @@ nav > div:nth-child(1) > #input > label > input:active
     outline: none;
 }
 
+
+/* Navigation unordered list */
+@media only screen and (max-width: 940px) {
+    nav > div:nth-child(2) {
+        display: none;
+        visibility: hidden;
+    }
+}
 nav > div:nth-child(2) {
-    flex: 2 1 100px;
+    flex: 1 2 0;
+
+    padding-left: 1rem;
+    /* border: 1px solid red; */
 }
 nav> div:nth-child(2) > ul{
     display: flex;
     /* border: 2px solid red; */
     list-style: none;
-    width: 45%;
+    width: 50%;
     justify-content: space-around;
+}
+
+
+/* third in nav with bell icon and notification */
+@media only screen and (max-width: 800px) {
+    nav> div:nth-child(3){
+        /* border: 2px solid red; */
+        margin: 0;
+        padding:0 !important;
+        margin-left: auto;
+    }
+    .ntf{
+        visibility: hidden;
+        display: none !important;
+        width: 0 !important;
+    }
+    .notification{
+        margin-left: auto;
+        /* border: 2px solid red;  */
+    }
 }
 nav> div:nth-child(3){
     display: flex;
@@ -80,4 +165,19 @@ nav> div:nth-child(3){
 .inline{
     display: inline-flex;
     align-items: center;
+    /* border: 2px solid green; */
+}
+
+.notification{
+display: flex;
+}
+.notification > div:nth-child(2) {
+background-color:rgb(69, 57, 226) ;
+border: 0.0001em solid rgb(73, 63, 214);
+padding: 0.3em;
+border-radius: 100%;
+height: 0.2em;
+width: 0.2em;
+right: 0.5em;
+position: relative;
 }
