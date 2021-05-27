@@ -1,8 +1,7 @@
  let search = document.getElementById("inputSearch")
  let submitBtn = document.getElementById("startSearch");
 
-console.log(search.value)
- const SEARCH = (sx)=>{
+ const SEARCH = (sx = "kelvinsekx")=>
    fetch('https://api.github.com/graphql', {
     method: "POST",
     headers:  {
@@ -56,10 +55,13 @@ console.log(search.value)
    renderErrMessage("")
    const payLoad = result;
    render(payLoad)
-});
-search.value = ""
- }
+   search.value = ""
+}).catch((err)=>renderErrMessage(err));
 
+/**
+ * 
+ * @param {*} err an error 
+ */
 const renderErrMessage = (err)=> {
   const el = document.getElementById("error")
   el.textContent = err 
@@ -69,14 +71,15 @@ const renderErrMessage = (err)=> {
 
 /**
  * 
- * @param {Object} payLoad:DOM Object 
+ * @param payLoad: a DOM object that is used to render update 
  */
-const render = (payLoad) => {
+const render = (payLoad = new Object()) => {
   const {data: {user}} = payLoad
   let element = document.getElementById("avi");
   let picz = document.getElementById("picz");
   let totalCount = document.getElementById("totalCount");
   let repo = document.getElementById("reporepo");
+  let smallImg = document.getElementById("smallImg")
   function getC(lang){
     let c = ''
     if (lang == "JavaScript"){
@@ -93,15 +96,16 @@ const render = (payLoad) => {
   let result = ""
   for(let r of user.repositories.nodes){
     result = result+`
-    <div style="height: 8rem; border-bottom: 1px solid rgba(97, 94, 94, 0.4); display: flex;  flex-direction: column; justify-content: space-around; padding-top: 2%">
+    <div style=" border-bottom: 1px solid rgba(97, 94, 94, 0.4); display: flex;  flex-direction: column; justify-content: space-evenly; padding: 3% 0; gap: 10px;min-height: 6rem">
 
     <div class="u_">
         <div class="u_username">${r.name}</div>
         <div class="u_rateStar">
-            <i class="bi bi-star" style="font-size: 88%;"></i> star
+            <span style="position: relative; bottom: 1px;"><i class="bi bi-star" style="font-size: 88%;"></i></span> 
+            <span>star</span>
         </div>
     </div>
-    ${r.description ? (`<div style="padding-bottom: 1em; width: 62%"><small style="font-size: 0.8em; color: #666;">
+    ${r.description ? (`<div style="padding-bottom: 1em; width: 60%"><small style="font-size: 0.8em; color: #666;">
     ${r.description}</small></div>`) : ''}
     <div style="display: flex;">
         <div style="display: flex; justify-content: space-between;width: 20rem; font-size: 75%;">
@@ -130,8 +134,10 @@ const render = (payLoad) => {
   totalCount.innerHTML = `${user.repositories.totalCount}`
   
   picz.innerHTML = `
-    <div class="avatarUrl"><img src='${user.avatarUrl}' alt="profile Avatar"></div>
+    <div class="avatarUrl"><img src='${user.avatarUrl}' alt= ${user.name}></div>
   `
+
+  smallImg.innerHTML = `<img src='${user.avatarUrl}' alt= ${user.name}>`
 
   element.innerHTML = `
   <div id="aavi">
@@ -144,6 +150,7 @@ const render = (payLoad) => {
     </div>
   </div>
   `
+  return true
 }
 
 submitBtn.addEventListener("click", ()=>SEARCH(search.value))

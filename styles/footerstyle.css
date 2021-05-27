@@ -36,14 +36,10 @@ nav > div:nth-child(1) > #brand {
 }
 
 /* search input style */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     nav > div:nth-child(1) > #input {
        visibility: hidden;
        display: none;
-    }
-    .bnn{
-        visibility: hidden;
-        display: none;
     }
 }
 nav > div:nth-child(1) > #input{
@@ -59,36 +55,6 @@ nav > div:nth-child(1) > #input > label {
     height: 100%;
 }
 
-#search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-}
-#inputSearch {
-    border: 1px solid grey;
-    border-radius: 4px;
-    width: 15rem;
-    background-color: transparent;
-    display: inline-block;
-    height: 2rem;
-    padding-left: 1rem;
-    font-size: 1rem;
-}
-#inputSearch::placeholder {
-    font-size: 1rem;
-}
-
-#startSearch{
-    background-color: rgba(42, 42, 180, 0.7);
-    border: none;
-    color: white;
-    font-weight: bold;
-    margin-left: 1em;
-    border-radius: 4px;
-    font-size: 1rem;
-    padding: 0.5em 0.7em;
-}
 nav > div:nth-child(1) > #input > label > input{
     border: none;
     background-color: transparent;
@@ -110,23 +76,20 @@ nav > div:nth-child(1) > #input > label > input:active
 
 
 /* Navigation unordered list */
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 700px) {
     nav > div:nth-child(2) {
         display: none;
         visibility: hidden;
     }
 }
 nav > div:nth-child(2) {
-    flex: 1 2 0;
-
-    padding-left: 1rem;
-    /* border: 1px solid red; */
+    flex: 0 2 20rem;
 }
 nav> div:nth-child(2) > ul{
     display: flex;
     /* border: 2px solid red; */
     list-style: none;
-    width: 50%;
+    width: 100%;
     justify-content: space-around;
 }
 
